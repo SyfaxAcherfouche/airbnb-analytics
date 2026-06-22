@@ -49,6 +49,7 @@ Streamlit (dashboard)
 
 ## 🗂️ Structure du projet
 
+```
 airbnb-analytics/
 ├── models/
 │   ├── schema.yml
@@ -73,7 +74,7 @@ airbnb-analytics/
 ├── profiles.yml
 ├── requirements.txt
 └── README.md
-
+```
 
 ## 🚀 Installation et exécution
 
