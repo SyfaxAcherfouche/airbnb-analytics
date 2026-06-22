@@ -1,0 +1,32 @@
+[0m17:29:59.229359 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001B892702B30>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001B893AE4460>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001B893AE4310>]}
+
+
+============================== 17:29:59.234639 | 72338071-c45f-48dc-975c-9c6986280593 ==============================
+[0m17:29:59.234639 [info ] [MainThread]: Running with dbt=1.11.11
+[0m17:29:59.235771 [debug] [MainThread]: running dbt with arguments {'version_check': 'True', 'no_print': 'None', 'static_parser': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'printer_width': '80', 'write_json': 'True', 'introspect': 'True', 'log_cache_events': 'False', 'empty': 'False', 'cache_selected_only': 'False', 'log_format': 'default', 'debug': 'False', 'fail_fast': 'False', 'partial_parse': 'True', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'profiles_dir': 'C:\\Users\\LENOVO\\Documents\\Workspace\\airbnb-analytics', 'use_colors': 'True', 'invocation_command': 'dbt run', 'indirect_selection': 'eager', 'use_experimental_parser': 'False', 'log_path': 'C:\\Users\\LENOVO\\Documents\\Workspace\\airbnb-analytics\\logs'}
+[0m17:29:59.519858 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '72338071-c45f-48dc-975c-9c6986280593', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001B893AE4580>]}
+[0m17:29:59.586703 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '72338071-c45f-48dc-975c-9c6986280593', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001B8931D3850>]}
+[0m17:29:59.589763 [info ] [MainThread]: Registered adapter: duckdb=1.10.1
+[0m17:29:59.882914 [debug] [MainThread]: checksum: 30a8cc8fdcbf66701b0944d4ccce3fa46dd04b61e5df68b9f16d57b2e0e3f0be, vars: {}, profile: , target: , version: 1.11.11
+[0m17:29:59.883945 [info ] [MainThread]: Unable to do partial parsing because saved manifest not found. Starting full parse.
+[0m17:29:59.884954 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': '72338071-c45f-48dc-975c-9c6986280593', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001B894CD0AC0>]}
+[0m17:30:01.015281 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 3 unused configuration paths:
+- models.airbnb_analytics.silver
+- models.airbnb_analytics.bronze
+- models.airbnb_analytics.gold
+[0m17:30:01.021872 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '72338071-c45f-48dc-975c-9c6986280593', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001B895015CF0>]}
+[0m17:30:01.090546 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\LENOVO\Documents\Workspace\airbnb-analytics\target\manifest.json
+[0m17:30:01.100222 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\LENOVO\Documents\Workspace\airbnb-analytics\target\semantic_manifest.json
+[0m17:30:01.122268 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '72338071-c45f-48dc-975c-9c6986280593', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001B895068C40>]}
+[0m17:30:01.123396 [info ] [MainThread]: Found 485 macros
+[0m17:30:01.124551 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '72338071-c45f-48dc-975c-9c6986280593', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001B895069990>]}
+[0m17:30:01.127662 [warn ] [MainThread]: Nothing to do. Try checking your model configs and model specification args
+[0m17:30:01.128669 [debug] [MainThread]: Command end result
+[0m17:30:01.178658 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\LENOVO\Documents\Workspace\airbnb-analytics\target\manifest.json
+[0m17:30:01.182658 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\LENOVO\Documents\Workspace\airbnb-analytics\target\semantic_manifest.json
+[0m17:30:01.190014 [debug] [MainThread]: Wrote artifact RunExecutionResult to C:\Users\LENOVO\Documents\Workspace\airbnb-analytics\target\run_results.json
+[0m17:30:01.192025 [debug] [MainThread]: Command `dbt run` succeeded at 17:30:01.192025 after 2.05 seconds
+[0m17:30:01.192025 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001B892702B30>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001B8950BFE80>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001B8931D3850>]}
+[0m17:30:01.193520 [debug] [MainThread]: Flushing usage events
+[0m17:30:01.596912 [debug] [MainThread]: An error was encountered while trying to flush usage events

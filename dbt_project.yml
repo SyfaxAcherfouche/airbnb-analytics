@@ -1,0 +1,15 @@
+name: 'airbnb_analytics'
+version: '1.0.0'
+profile: 'airbnb_analytics'
+
+model-paths: ["models"]
+seed-paths: ["seeds"]
+
+models:
+  airbnb_analytics:
+    bronze:
+      +materialized: view
+    silver:
+      +materialized: table
+    gold:
+      +materialized: table

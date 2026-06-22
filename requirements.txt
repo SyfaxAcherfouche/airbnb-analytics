@@ -1,0 +1,7 @@
+numpy>=1.26
+pandas>=2.0
+dbt-duckdb
+duckdb
+streamlit
+plotly
+requests
