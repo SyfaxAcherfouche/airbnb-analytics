@@ -11,20 +11,22 @@ sur les logements, les hôtes, les avis clients et l'impact des nuits de pleine 
 
 
 ## 🏗️ Architecture
-Sources (S3)
-    │
-    ▼
-Bronze (vues brutes)
-    │
-    ▼
-Silver (tables nettoyées)
-    │
-    ▼
-Gold (tables analytiques)
-    │
-    ▼
-Streamlit (dashboard)
 
+```
+Sources (S3)
+     │
+     ▼
+Bronze (vues brutes)
+     │
+     ▼
+Silver (tables nettoyées)
+     │
+     ▼
+Gold (tables analytiques)
+     │
+     ▼
+Streamlit (dashboard)
+```
 
 ## 🛠️ Stack technique
 
