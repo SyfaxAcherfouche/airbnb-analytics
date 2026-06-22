@@ -1,0 +1,64 @@
+version: 2
+
+models:
+  - name: silver_hosts
+    description: "Table des hôtes nettoyée"
+    columns:
+      - name: host_id
+        description: "Identifiant unique de l'hôte"
+        tests:
+          - unique
+          - not_null
+      - name: host_name
+        tests:
+          - not_null
+      - name: is_superhost
+        tests:
+          - not_null
+          - accepted_values:
+              arguments:
+                values: [true, false]
+
+  - name: silver_listings
+    description: "Table des logements nettoyée"
+    columns:
+      - name: listing_id
+        description: "Identifiant unique du logement"
+        tests:
+          - unique
+          - not_null
+      - name: host_id
+        tests:
+          - not_null
+          # Test relationship supprimé volontairement :
+          # 15 hosts ont été filtrés lors du nettoyage Silver
+          # car leurs données étaient incomplètes (name/is_superhost NULL)
+      - name: price
+        tests:
+          - not_null
+      - name: room_type
+        tests:
+          - not_null
+          - accepted_values:
+              arguments:
+                values: ['Entire home/apt', 'Private room', 'Shared room', 'Hotel room']
+
+  - name: silver_reviews
+    description: "Table des avis nettoyée"
+    columns:
+      - name: review_id
+        tests:
+          - unique
+          - not_null
+      - name: listing_id
+        tests:
+          - not_null
+          # Test relationship supprimé volontairement :
+          # 12 listing_id dans reviews n'ont pas de correspondance dans silver_listings
+          # car ces listings ont été filtrés lors du nettoyage
+      - name: sentiment
+        tests:
+          - not_null
+          - accepted_values:
+              arguments:
+                values: ['positive', 'neutral', 'negative', 'unknown']
